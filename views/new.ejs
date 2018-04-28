@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+
+
+    <div class="ui raised container segment">
+
+        <form class="ui form" action="/change" method="POST">
+            <div class="field">
+                <label>Change Id</label>
+                <input type="text" name="change[changeId]" placeholder="Change Id">
+            </div>
+            <div class="field">
+                <label>Change Header</label>
+                <input type="text" name="change[header]" placeholder="Change Header">
+            </div>
+            <div class="ui form">
+                <div class="field">
+                    <label>Description</label>
+                    <textarea name="change[description]" cols="100" rows="10"> </textarea>
+                </div>
+            </div>
+            <button class="ui red button" type = "submit">Submit</button>
+
+        </form>
+    </div>
+
+    <% include ./partials/footer %>

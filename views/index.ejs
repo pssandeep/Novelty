@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+
+    <% resultChanges.forEach(function(change){ %>
+        <div class="ui raised container segment">
+
+            <div class="ui big breadcrumb">
+                <a class=" section" href="/change/<%= change._id%>">
+                    <%= change.changeId%>
+                </a>
+                <div class="divider"> / </div>
+                <a class="section" href="/change/<%= change._id%>">
+                    <%= change.header%>
+                </a>
+            </div>
+            <div class="description text container">
+                <p>
+                    <%= change.description.substring(0,100)%>
+                </p>
+            </div>
+            <div class=" text container">
+                <%= change.enteredDate.toDateString() %>
+            </div>
+        </div>
+    <% }); %>
+
+<% include ./partials/footer %>

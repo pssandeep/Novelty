@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+
+    <div class="ui raised container segment">
+        <form class="ui form" action="/change/<%= resultChange._id %>?__method=PUT" method="POST">
+            <div class="field">
+                <label>Change Id</label>
+                <input type="text" name="change[changeId]" value="<%= resultChange.changeId %>">
+            </div>
+            <div class="field">
+                <label>Change Header</label>
+                <input type="text" name="change[header]" value="<%= resultChange.header %>">
+            </div>
+            <div class="ui form">
+                <div class="field">
+                    <textarea name="change[description]" cols="100" rows="10">
+                        <%- resultChange.description %>
+                    </textarea>
+                </div>
+            </div>
+            <button class="ui red button" type = "submit">Submit</button>
+
+        </form>
+    </div>
+
+    <% include ./partials/footer %>
